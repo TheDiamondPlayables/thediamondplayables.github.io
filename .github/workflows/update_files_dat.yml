@@ -26,3 +26,4 @@ jobs:
        git add -A
        git commit -m "Automatically update _files.txt"
        git push
+      fi
