@@ -1,0 +1,75 @@
+name: Update all files.dat when a fol
+
+on:
+ workflow_dispatch:
+ push:
+  branches: [main,master]
+
+jobs:
+ update-files
+  runs-on: ubuntu-latest
+   steps:
+   - name: Gets full history for detecting changes
+     uses: actions/checkout@v4
+   
+   - name: Set up Python
+     uses: actions/setup-python@v4
+     with:
+       python-version: '3.x'
+   
+   - name: Gets changed directories
+     id: changed-dirs
+     run: |
+       # Get list of all changed files in the last commit
+       CHANGED_FILES=$(git diff --name-only HEAD^ HEAD)
+       
+       # Extract unique directory paths from changed files
+       CHANGED_DIRS=$(echo "$CHANGED_FILES" | xargs -I{} dirname {} | sort -u)
+       
+       # Format as JSON array for Python to process
+       echo "::set-output name=dirs::$(echo "$CHANGED_DIRS" | jq -R -s -c 'split("\n")[:-1]')"
+
+   - name: Smart generate files.dat
+     run: |
+       python3 -c "
+       import os
+       import json
+       from pathlib import Path
+
+       # Get changed directories from previous step
+       changed_dirs = json.loads('${{ steps.changed-dirs.outputs.dirs }}')
+       changed_dirs = set(d if d != '.' else '' for d in changed_dirs)
+       
+       EXCLUDES = {'.git', '.github'}
+       
+       for root, dirs, files in os.walk('.'):
+        # Skip excluded directories
+        dirs[:] = [d for d in dirs if d not in EXCLUDES]
+        
+        # Skip directory if:
+        # 1. Not in changed directories AND
+        # 2. files.dat already exists AND
+        # 3. files.dat is not itself changed
+        rel_path = root[2:] if root.startswith('./') else root[1:] if root.startswith('.') else root
+        files_dat = Path(root) / 'files.dat'
+        
+        if (rel_path not in changed_dirs and 
+         files_dat.exists() and 
+         str(files_dat) not in json.loads('${{ steps.changed-dirs.outputs.dirs }}')):
+         continue
+            
+        # Get all files except files.dat itself and sort them
+        file_list = sorted([f for f in files if f != 'files.dat'])
+        
+        # Write to files.dat if there are files or if it already exists
+        if file_list or files_dat.exists():
+         with open(files_dat, 'w') as f:
+          f.write('\n'.join(file_list) + '\n')
+       "
+   
+   - name: Commit and push changes if needed
+     run: |
+      git config --global user.name 'GitHub Actions'
+      git config --global user.email 'actions@github.com'
+      git add -A
+      git diff --quiet && git diff --cached --quiet || (git commit -m "Update files.dat listings [smart update]" && git push)
