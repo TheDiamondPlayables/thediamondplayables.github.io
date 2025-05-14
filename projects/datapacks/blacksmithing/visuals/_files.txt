@@ -1,0 +1,4 @@
+nte_21.gif
+nte_pre21.gif
+repair_chipped_anvil.png
+repair_damaged_anvil.png
