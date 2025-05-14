@@ -17,3 +17,12 @@ jobs:
         find . -maxdepth 1 -type f ! -name "_files.txt" -printf "%P\n" | sort > _files.txt
        )
       done
+
+   - name: Commit changes if any
+     if: git status --porcelain
+     run: |
+       git config --global user.name "GitHub Actions"
+       git config --global user.email "actions@github.com"
+       git add -A
+       git commit -m "Automatically update _files.txt"
+       git push
