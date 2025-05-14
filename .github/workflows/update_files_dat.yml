@@ -1,4 +1,4 @@
-name: Automatically update files.dat on folders that have recently been changed.
+name: Update _files.txt
 
 on:
  push:
@@ -8,12 +8,12 @@ jobs:
  update_files:
   runs-on: ubuntu-latest
   steps:
-   - name: Update _files.dat
+   - name: Update _files.txt
      run: |
-      find . -type f -name "_files.dat" | while read -r file; do
+      find . -type f -name "_files.txt" | while read -r file; do
        dir="$(dirname "$file")"
        (
         cd "$dir" || exit
-        find . -maxdepth 1 -type f ! -name "_files.dat" -printf "%P\n" | sort > _files.dat
+        find . -maxdepth 1 -type f ! -name "_files.txt" -printf "%P\n" | sort > _files.txt
        )
       done
