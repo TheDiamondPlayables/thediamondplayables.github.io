@@ -1,4 +1,4 @@
-name: Update all files.dat when a fol
+name: Update files.dat to have a file with all filenames for future use.
 
 on:
  workflow_dispatch:
