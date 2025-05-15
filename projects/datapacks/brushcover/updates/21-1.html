@@ -1,0 +1,95 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2024-10-07",
+ "hide_date": false
+}
+</script>
+
+<p>Sorry for the long wait, lads. I couldn't get things done fast enough due to the real life situations I'm having to deal with. Also because the internal tools needed to make all this needs a rework in order to add some of the new stuff seen in this update.
+<br>There's also been quite a bit of changes made to cover all the side-cases introduced by the releases the pack is designed for, so for an update to a simple Brush project, we got a lot of changes to cover. Here goes!</p>
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.21 and 1.21.1!</li>
+ <li>You can now <b>hide everything in Suspicious Blocks!</b></li>
+ <li>You can also <b>make empty Suspicious Blocks</b> by brushing Sand/Gravel with nothing else on!</li>
+ <li>Unbreaking enchantment <b>now affects each durability point lost</b> instead of being grouped together like before.</li>
+ <ul>
+  <li>This is how Vanilla does it - though it is not as efficient when it's run.</li>
+  <li>This also means you'd lose less durability per brush with Unbreaking now, on average.</li>
+ </ul>
+ <li><span>Improved some effects to feel more convincing</span>. These affect:</li>
+ <ul>
+  <li>Brush breaking when hiding an item within Sand/Gravel.</li>
+  <li>Brush sounds once an item's successfully hid in Sand.</li>
+ </ul>
+ <li><b>Now supports Brushes with custom durability values!</b></li>
+ <li>Hiding items now <b>works regardless of players' interaction ranges</b>.</li>
+ <ul>
+  <li>Note that longer interaction ranges are laggier if used, so be sure your devices are up for it first!</li>
+ </ul>
+ <li>Improved <a target=_blank href="https://bugs.mojang.com/browse/MC-260225">MC-260225</a> workaround yet again to be closer to Vanilla's mechanics!</li>
+ <li>Brush sounds are now in the Player sound category.</li>
+ <ul>
+  <li>It sounds obvious now, but the details are often overlooked by most.</li>
+ </ul>
+ <li>Made a major update to the Admin Book system!</li>
+ <li>In-game Settings can now be saved as a Preset.</li>
+ <ul>
+  <li>Saved Presets can then be used across worlds and shared online as well!</li>
+ </ul>
+ <li>Added <b>2 new built-in presets</b> to try out: <span>Impatient</span> and <span>Reversible</span></li>
+ <li><span>Cover Durability</span> is now <span>Cover Damage</span> to better describe what it does.</li>
+ <li>New setting: <span>Cover % Damage</span> - damages the Brush based on its max durability.</li>
+ <li>Brush damage settings <b>now accept negative values</b>.</li>
+ <ul>
+  <li>It doesn't affect the project much, so why not?</li>
+ </ul>
+ <li>Removed "Cover Limits" and "Mine to Move" settings.</li>
+ <ul>
+  <li>Having these settings causes a lot more extra problems that just isn't worth the time fixing.</li>
+ </ul>
+ <li>Admin Books now <b>remember where you're at, and opens on the last page edited</b>!</li>
+ <ul>
+  <li>This saves a lot of editing time that would otherwise be spent on reaching that page from the beginning.</li>
+ </ul>
+ <li>Each page now has up to 9 lines for settings instead of 8.</li>
+ <li><b>New "Presets" page</b> that you can now use to save/load Presets!</li>
+ <li><b>Reset Settings</b> button now only applies to settings from that page, and has been renamed accordingly.</li>
+ <li>The <b>Next</b> and <b>Back</b> buttons are now always usable, even if not rendered.</li>
+ <ul>
+  <li>This lets you <span>loop around to the start or end</span>, reducing clicks needed to navigate to pages in half.</li>
+  <li>It takes a while getting used to the fact that you can do this because they don't really render properly, I can't really fix that without using a proper mod for it.</li>
+ </ul>
+ <li>Fixed rapidly tapping the Brush button causing items to be lost once brushing is finished.</li>
+ <li>Fixed items popping out of Suspicious Blocks too early, leading to blocks without items to brush through.</li>
+</ul>
+<h1>Extras:</h1>
+<ul>
+ <li>Added Admin Commands! To use these commands:</li>
+ <ul>
+  <li>Simply type <code>/function tdp.</code>, and the game should give you suggestions on what to use.
+  <br><b>Side note:</b> Any suggestions <b>with underscores followed by numbers</b> are <b>for internal use only</b> and won't work if run on their own.</li>
+  <li>Only those with the "Allow Commands" permission can use Admin Commands.</li>
+ </ul>
+ <li>A lot of filenames have been changed to properly organize everything.</li>
+ <ul>
+  <li>IDs have been removed and is now replaced by code names.</li>
+  <li>The format is now tdp:code_name/data, to reserve the old names for Admin Commands.</li>
+ </ul>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>Improved the look of info text messages.</li>
+ <li>Text files have been merged into one single Interactive Help File.</li>
+ <ul>
+  <li>I have to learn 3 new languages to get all this to work as well as it did. </li>
+  <li>Not the best at it yet, but it works well enough for now.</li>
+ </ul>
+ <li>The master background has been updated for major releases as always.</li>
+ <li>Codebase now uses Scripter 4.</li>
+</ul>
+<h1>Notes:</h1>
+<ul>
+ <li>Currently custom enchantments aren't supported, primarily because there isn't an efficient method to detect what a custom enchantment does yet.</li>
+ <ul>
+  <li>Also because those things are Experimental for some reason. Ouch.</li>
+ </ul>
+</ul>
