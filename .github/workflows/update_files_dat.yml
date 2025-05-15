@@ -3,6 +3,7 @@ name: Update _files.txt
 on:
  push:
   branches: [main,master]
+ workflow_dispatch: # Add manual trigger
 
 jobs:
  update_files:
@@ -12,10 +13,11 @@ jobs:
      uses: actions/checkout@v4
      with:
       token: ${{ secrets.permissions_token }}
-      fetch-depth: 0  # Get full history to compare changes
+      fetch-depth: 0 # Get full history to compare changes
 
-   - name: Get changed directories
+   - name: Get changed directories (skip if manual trigger)
      id: updated_dirs
+     if: ${{ github.event_name != 'workflow_dispatch' }}
      run: |
       # Get all changed files in this push
       changed_files=$(git diff --name-only HEAD^ HEAD)
@@ -33,9 +35,28 @@ jobs:
       # Convert array to JSON for output
       echo "dirs=${dirs[@]}" | jq -R -s -c 'split(" ")' >> $GITHUB_OUTPUT
 
-   - name: Update _files.txt in changed directories
+   - name: Get all directories with _files.txt (if manual trigger)
+     id: all_dirs
+     if: ${{ github.event_name == 'workflow_dispatch' }}
      run: |
-      changed_dirs=${{ steps.updated_dirs.outputs.dirs }}
+      # Find all directories containing _files.txt
+      dirs=()
+      while IFS= read -r -d '' file; do
+       dir=$(dirname "$file")
+       dirs+=("$dir")
+      done < <(find . -name "_files.txt" -print0)
+      
+      # Convert array to JSON for output
+      echo "dirs=${dirs[@]}" | jq -R -s -c 'split(" ")' >> $GITHUB_OUTPUT
+
+   - name: Update _files.txt in target directories
+     run: |
+      # Use different output based on trigger type
+      if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+       changed_dirs=${{ steps.all_dirs.outputs.dirs }}
+      else
+       changed_dirs=${{ steps.updated_dirs.outputs.dirs }}
+      fi
       
       # Convert JSON array to bash array
       eval "dirs=($(echo '$changed_dirs' | jq -r '.[]'))"
