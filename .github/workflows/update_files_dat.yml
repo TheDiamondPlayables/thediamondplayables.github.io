@@ -3,7 +3,7 @@ name: Update _files.txt
 on:
  push:
   branches: [main,master]
- workflow_dispatch: # Add manual trigger
+ workflow_dispatch:
 
 jobs:
  update_files:
@@ -13,56 +13,38 @@ jobs:
      uses: actions/checkout@v4
      with:
       token: ${{ secrets.permissions_token }}
-      fetch-depth: 0 # Get full history to compare changes
+      fetch-depth: 0
 
-   - name: Get changed directories (skip if manual trigger)
+   - name: Determine directories to update
      id: updated_dirs
-     if: ${{ github.event_name != 'workflow_dispatch' }}
      run: |
-      # Get all changed files in this push
-      changed_files=$(git diff --name-only HEAD^ HEAD)
-      
-      # Extract unique parent directories of changed files
-      dirs=()
-      for file in $changed_files; do
-       dir=$(dirname "$file")
-       # Only add directory if not already in array
-       if [[ ! " ${dirs[@]} " =~ " ${dir} " ]]; then
+      # Find all folders if triggered manually, otherwise find changed directories.
+      if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+       dirs=()
+       while IFS= read -r -d '' file; do
+        dir=$(dirname "$file")
         dirs+=("$dir")
-       fi
-      done
-      
-      # Convert array to JSON for output
-      echo "dirs=${dirs[@]}" | jq -R -s -c 'split(" ")' >> $GITHUB_OUTPUT
+       done < <(find . -name "_files.txt" -print0)
+      else
+       changed_files=$(git diff --name-only HEAD^ HEAD)
+       dirs=()
+       for file in $changed_files; do
+        dir=$(dirname "$file")
+        if [[ ! " ${dirs[@]} " =~ " ${dir} " ]]; then
+         dirs+=("$dir")
+        fi
+       done
+      fi
 
-   - name: Get all directories with _files.txt (if manual trigger)
-     id: all_dirs
-     if: ${{ github.event_name == 'workflow_dispatch' }}
-     run: |
-      # Find all directories containing _files.txt
-      dirs=()
-      while IFS= read -r -d '' file; do
-       dir=$(dirname "$file")
-       dirs+=("$dir")
-      done < <(find . -name "_files.txt" -print0)
-      
-      # Convert array to JSON for output
       echo "dirs=${dirs[@]}" | jq -R -s -c 'split(" ")' >> $GITHUB_OUTPUT
 
    - name: Update _files.txt in target directories
      run: |
-      # Use different output based on trigger type
-      if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-       changed_dirs=${{ steps.all_dirs.outputs.dirs }}
-      else
-       changed_dirs=${{ steps.updated_dirs.outputs.dirs }}
-      fi
-      
       # Convert JSON array to bash array
-      eval "dirs=($(echo '$changed_dirs' | jq -r '.[]'))"
+      dirs_json='${{ steps.updated_dirs.outputs.dirs }}'
+      readarray -t dirs < <(echo "$dirs_json" | jq -r '.[]')
       
       for dir in "${dirs[@]}"; do
-       # Check if directory contains _files.txt
        if [[ -f "${dir}/_files.txt" ]]; then
         echo "Updating _files.txt in ${dir}"
         (
