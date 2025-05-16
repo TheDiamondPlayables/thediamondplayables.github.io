@@ -1,0 +1,106 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2025-01-08",
+ "hide_date": false
+}
+</script>
+
+<p>Villager Names has been reworked to better fit the game's worlds, and to keep things easy to wrap your head around since these features are purely detail stuff.</p>
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.21 and 1.21.1!</li>
+ <li>Names <b>are now split into two categories</b>: It's either a Full Name, or a Nickname.</li>
+ <li>Nicknames is a <b>new category</b> of short, interesting but weird Villager names.</li>
+ <ul>
+  <li>They don't speak our language after all, so their Nicknames are weird.</li>
+  <li>There are <span>10291 unique nicknames available</span> currently.</li>
+  <li>If there are any names that sounds offensive, it's because they were essentially made by merging random bits of words together, and I don't have the resources to do a full profanity scan of all the generated results just yet. Sorry!</li>
+ </ul>
+ <li>Added <b>more names and <span class="tooltip"><span class="tooltipText">Previously known as Family Names.</span>house names</span></b> to the Full Name category to increase its diversity.</li>
+ <ul>
+  <li>There are now <b>30 million combinations</b> of full names, more than enough to last a lifetime.</li>
+  <li>Also, names only convey gender meaning if you think of it as such. Villagers are genderless, after all.</li>
+ </ul>
+ <li>Names <b>are no longer colored differently</b> based on its category.</li>
+ <ul>
+  <li>This is to keep things simple, since colored names don't really mean anything in game anyway.</li>
+ </ul>
+ <li>Some villagers can now be found without a name.</li>
+ <ul> 
+  <li>They do have names, they just don't want you to know it.</li>
+  <li>You can use Name Tag commands on them if you're really curious though.</li>
+ </ul>
+ <li><b>Popular Names and Mojang Names category have been removed</b>.</li>
+ <ul> 
+  <li>I find that <span>having ties to real world just takes away from the feeling of being in the game's world</span>.</li>
+  <li>Also because, I don't have a reason to keep up to date with famous people, or new people in the Credits. I mean, it doesn't help me get better in doing this stuff, so why bother?</li>
+ </ul>
+ <li>New Name Tag command: <code>/nickname</code>, which gives the Villager a new nickname.</li>
+ <li><code>/rename</code> now no longer has a chance to give nicknames to Villagers.</li>
+ <ul>
+  <li>You can use the new <code>/nickname</code> for that.</li>
+ </ul>
+ <li><code>/nameless</code> now works properly again in wiping out a Villager's name.</li>
+ <ul>
+  <li>I didn't ship this workaround before because past me had it set in their head that having a different UUID messes things up a lot.</li>
+  <li>It does have some breaking implications, but it only affects a very small number of people, if the specific case that led up to it even exist.</li>
+  <li>Also, I'll never wait for Mojang to fix the bug that broke my things ever again.</li>
+ </ul>
+ <li>Fixed a bug causing Villagers to take on others' house names if they were really close to them when <code>/rename</code> is applied.</li>
+ <li>New advancement: <span class="tooltip"><span class="tooltipText">Name a Villager "<span>/nickname</span>" to show their nicknames!</span>Also Known As</span></li>
+ <li>All previous advancements have had reworks to be more unique!</li>
+ <li>Removed the 2 reference trading achievements.</li>
+ <ul>
+  <li>Mainly because of the whole "having ties to the real world" nature of those advancements.</li>
+ </ul>
+ <li>Updated the internal Villagers' format to prepare for future updates.</li>
+ <ul>
+  <li>If you're updating from an older version, the pack will do this automatically for you.</li>
+ </ul>
+ <li>Completely overhauled the project's inner workings, using new techniques to improve pack performance!</li>
+ <li>Villager Names now pauses itself in servers when no players are active.</li>
+ <ul>
+  <li>This improves performance on servers with a lot of forceloaded chunks, but no one's around.</li>
+  <li>You only really see these names when you're online anyway.</li>
+ </ul>
+ <li>Improved performance whenever a Name Tag command was used.</li>
+</ul>
+<h1>Extras:</h1>
+<ul>
+ <li>Added Admin Commands! To use these commands:</li>
+ <ul>
+  <li>Simply type <code>/function tdp.</code>, and the game should give you suggestions on what to use.
+  <br><b>Side note:</b> Any suggestions <b>with underscores followed by numbers</b> are <b>for internal use only</b> and won't work if run on their own.</li>
+  <li>Only those with the "Allow Commands" permission can use Admin Commands.</li>
+ </ul>
+ <li>A lot of filenames have been changed to properly organize everything.</li>
+ <ul>
+  <li>IDs have been removed and is now replaced by code names.</li>
+  <li>The format is now <code>tdp:code_name/data</code>, to reserve the old names for Admin Commands.</li>
+ </ul>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>Improved the look of info text messages.</li>
+ <li>Text files have been merged into one single Interactive Help File.</li>
+ <ul>
+  <li>I have to learn 3 new languages to get all this to work as well as it did. </li>
+  <li>Not the best at it yet, but it works well enough for now.</li>
+ </ul>
+ <li>The master background has been updated for major releases as always.</li>
+ <li>Codebase now uses Scripter 4.</li>
+</ul>
+<h1>Credits:</h1>
+<ul>
+ <li>For the Full Names, I got the lists from these sources:</li>
+ <ul>
+  <li><a href="https://www.kabalarians.com/cfm/top-3000-baby-names-male.cfm">Names</a> <a href="https://www.kabalarians.com/cfm/top-3000-baby-names-female.cfm">Names 2</a> <a href="https://namecensus.com/last-names/">Last Names</a></li>
+  <li>Once the list is made, I cropped out all the duplicates (315 names and 2 housenames).</li>
+  <li>The duplicated names are then replaced with a custom set of unique names so they match the intended 6000 count. I generated these by randomly merging syllables formed from the existing set of names then filter out the ones I like - you can get the list of these on Patreon.</li>
+  <li>I've also added 2 family names: Persson and Bergensten. I think you can see why.</li>
+  <li>I considered clipping out similar sounding names, but I decided to keep them since it would make for more interesting stories.</li>
+ </ul>
+ <li>Heads used for the Advancements: <a href="https://minecraft-heads.com/custom-heads/head/64805-question-mark">Question Mark</a></li>
+ <li>I'll tell you how I generated these nicknames in a separate Patreon post.</li>
+ <ul>
+  <li>Some of the things I used: <a href="https://ipa-reader.com/">IPA Reader</a> <a href="https://tophonetics.com/">ToPhonetics</a></li>
+ </ul>
+</ul>

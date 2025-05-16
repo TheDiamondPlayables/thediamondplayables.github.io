@@ -1,0 +1,131 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2025-02-23",
+ "hide_date": false
+}
+</script>
+
+<p>Also known as the Tricky Experiences update.</p>
+<p>This update overhauled existing XPStorage's existing mechanics in order to add new abilities while still keeping to the core design of the pack. It might be a bit tricky to follow along though, hence the name.</p>
+<p>There are some new items here, but since I'm not using any Resource Packs for my works, they'll be a bit trickier to tell apart. I'll see what I can do about this problem in later patches, if I can add new looking items without Resource Packs. (I have nothing against them, I just think they should always be optional)</p>
+<h1>Primed EXP Jars:</h1>
+<p>Primed EXP Jars can be crafted by placing 4 Glass Bottles and a center material in a plus pattern.
+<br>When thrown, <span>Primed EXP Jars trap as much Experience from you as it can</span> into the Jar.
+<br>You can then drink the resulting EXP Jar to get your Experience back!</p>
+<p>Primed EXP Jars comes in 3 different variants:</p>
+<ul>
+ <li><b>Primed Copper EXP Jar:</b></li>
+ <ul>
+  <li>Your first creation. Quick and easy to make, but isn't really that good.</li>
+  <li>Uses a Copper Ingot as its center material.</li>
+  <li>Stores enough EXP to move from <span class=tooltip><span class=tooltipText>Contains up to 315 Experience.</span>Level 1 to 15</span>.</li>
+  <li>Costs <span class=tooltip><span class=tooltipText>You'd lose 7 full Jars' worth to fill up 10 of these.</span>70% more Experience</span> to fill up.</li>
+ </ul>
+ <li><b>Primed Fiery EXP Jar:</b></li>
+ <ul>
+  <li>Needs a bit of work at first, but is pretty reliable.</li>
+  <li>Uses Blaze Powder as its center material.</li>
+  <li>Stores enough EXP to move from <span class=tooltip><span class=tooltipText>Contains up to 2920 Experience.</span>Level 1 to 45</span>.</li>
+  <li>Costs <span class=tooltip><span class=tooltipText>You'd lose 1 full Jar's worth to fill up 4 of these.</span>25% more Experience</span> to fill up.</li>
+ </ul>
+ <li><b>Primed Ender EXP Jar:</b></li>
+ <ul>
+  <li>The ultimate storage solution. These require commitment, but they never let you down.</li>
+  <li>Uses Dragon's Breath as its center material.</li>
+  <li>Stores enough EXP to move from <span class=tooltip><span class=tooltipText>Contains up to 15345 Experience.</span>Level 1 to 75</span>.</li>
+  <li>Doesn't cost more Experience to fill up.</li>
+ </ul>
+</ul>
+<p>Primed EXP Jars also have some new special abilities:</p>
+<ul>
+ <li>You can prime them for throwing by adding Gunpowder to one of the top corners!</li>
+ <li>Hate seeing underfilled EXP Jars? Try adding a Tripwire Hook to one of the top corners!</li>
+ <li>Throwing a Primed EXP Jar into a full water cauldron does something cool.</li>
+ <li>Also, the new Crafter can be used to craft a lot of the stuff automatically.</li>
+</ul>
+<p>PS: Whatever you do, don't drink this stuff. It's not good for ya.</p>
+<h1>EXP Jar Changes:</h1>
+<ul>
+ <li><b>Added Splash EXP Jars</b>, which can be thrown to get all your Experience back!</li>
+ <ul>
+  <li>When thrown, these jars spawn Experience Orbs equal to the amount of Experience it had.</li>
+  <li>You can use this to fix Mending gear at the cost of the Jar itself.</li>
+  <li>These aren't really stackable so carrying them around might be tricky.</li>
+ </ul>
+ <li><b>EXP Jars can now be drunk multiple times</b>! This helps you get enough levels for Enchantments without going over, or used to split Experience evenly with your buddies without losing a Jar.</li>
+ <li>Breaking an EXP jar in its item form now shatters it, spawning Experience similar to Splash EXP Jars, but you won't get everything back this way. There are uses to this, but I'll let you find that out.</li>
+ <li>Sculk Catalysts react to Experience spawned by EXP Jars. You'll need to aim for the head.</li>
+</ul>
+<h1>Admin Setting Changes:</h1>
+<p>The Admin Settings have also been overhauled completely to use a new system that came with the Update Series, which adds a lot of features in and of itself. Asides from that though, we got a lot more new settings to tweak, but do note that old settings will be lost. Here are all the Settings:</p>
+<ul>
+ <li><span>Copper EXP Jar:</span></li>
+ <ul>
+  <li>Jar Uses: 1</li>
+  <li>Stack Size: 16</li>
+  <li>Splash Stack Size: 1</li>
+  <li>Max Capacity: 315</li>
+  <li>Storing Loss: 70%</li>
+  <li>Curing Bonus: 10%</li>
+  <li>Cured Status: True</li>
+ </ul>
+ <li><span>Fiery EXP Jar:</span></li>
+ <ul>
+  <li>Jar Uses: 5</li>
+  <li>Stack Size: 16</li>
+  <li>Splash Stack Size: 1</li>
+  <li>Max Capacity: 2920</li>
+  <li>Storing Loss: 25%</li>
+  <li>Curing Bonus: 5%</li>
+  <li>Cured Status: True</li>
+ </ul>
+ <li><span>Ender EXP Jar:</span></li>
+ <ul>
+  <li>Jar Uses: 10</li>
+  <li>Stack Size: 16</li>
+  <li>Splash Stack Size: 1</li>
+  <li>Max Capacity: 15345</li>
+  <li>Storing Loss: 0%</li>
+  <li>Curing Bonus: 0%</li>
+  <li>Cured Status: False</li>
+ </ul>
+ <li>Extras:</li>
+ <ul>
+  <li><span class=tooltip><span class=tooltipText>If the jar's Experience amount should be shown or not. Does not affect existing jars.</span>Show Capacity</span>: True</li>
+  <li><span class=tooltip><span class=tooltipText>Sets how much Experience should be returned if an EXP Jar is shattered.</span>Shatter Efficiency</span>: 35%</li>
+  <li><span class=tooltip><span class=tooltipText>Same as Shatter Efficiency, but for splash EXP Jars.</span>Splash Shatter Efficiency</span>: 85%</li>
+  <li><span>Min Charge EXP</span>: 100</li>
+  <ul>
+   <li>Sets the minimum amount of Experience required for another Sculk Catalyst Charge to be made.</li>
+   <li>This controls how spread out the Charges are.</li>
+   <li>Max 1000 EXP per charge. Sculk Catalysts are hardcoded to not handle any more anyway.</li>
+  </ul>
+  <li><span>Max Active Charges</span>: 10</li>
+  <ul>
+   <li>Sets how many Charges the Sculk Catalyst goes through at a time in a queue.</li>
+   <li>If 0, disables Sculk Catalyst behaviour on Splash EXP Jars.</li>
+   <li>Max 32 charges. Sculk Catalysts are hardcoded to not handle more anyway.</li>
+  </ul>
+  <li><span>Persistent Orbs</span>: False</li>
+  <ul>
+   <li>Stops Experience Orbs from despawning if they're being collected by Players.</li>
+   <li>Only have this on if you think your machine can handle it!</li>
+  </ul>
+ </ul>
+</ul>
+<h1>Extras:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.21 and 1.21.1!</li>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>You can now save your in-game Settings as a Preset, and load it in another world!</li>
+ <ul>
+  <li>Saved Presets can also be shared online as well! Just send the preset command.</li>
+ </ul>
+ <li>Admins can also give themselves custom items added by my projects with <span>the new give Command</span>!</li>
+  <ul>
+   <li>Syntax: <code>/function tdp.give:xpstorage/&ltitem&gt {count:&lt1-6400&gt}</code></li>
+   <li>For EXP Jars, you'll also need to add <code>exp:&lt1-2147483647&gt</code> field in too.</li>
+   <li>Example: <code>/function tdp.give:xpstorage/fiery_exp_jar {count:3,exp:3500}</code></li>
+  </ul>
+ <li>Added an Admin Command that gives EXP Jars.</li>
+</ul>

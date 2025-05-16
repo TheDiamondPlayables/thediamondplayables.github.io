@@ -1,0 +1,74 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-04-16",
+ "hide_date": false
+}
+</script>
+
+<h1>Important changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.19.4 and higher.</li>
+ <ul>
+  <li>It's not advised to run this in older versions, I won't be able to provide much support if you do.
+  <br>(Imagine having to do that for all older versions for all my datapacks, you'll see a scale issue)</li>
+ </ul>
+ <li>Major changes to how XPStorage works.</li>
+ <ul>
+  <li>These changes are meant to make XPStorage alot more balanced for survival use.</li>
+  <li>More details of these changes below.</li>
+ </ul>
+</ul>
+<h1>Gameplay changes:</h1>
+<ul>
+ <li>Reworked Experience Jar's design.</li>
+ <ul>
+  <li>Experience Jar is now simply called EXP Jar.</li>
+  <li>EXP Jars now displays the points you get when using it directly in its name.</li>
+  <li>EXP Jars now look the same, with the main difference being the EXP points shown.
+  <br>Mainly so you can kinda tell which bottle is the EXP Jar, and which Jar is the one you want.</li>
+ </ul>
+ <li>To put your Experience in a Jar, you now need to throw a Thick Potion into an empty Cauldron, then fill it up with a Water Bucket!</li>
+ <ul>
+  <li>There's also a pretty neat animation and sound to go with this, too!</li>
+  <li>I designed this mechanic to add a "high risk high reward" element to XPStorage.
+  <br>Basically, the more experience you have, the less items you need to store it into EXP Jars.
+  <br>But also: The more experience you have, the more of it you'll lose if you die. You get the point.</li>
+  <li>This also gives you another reason to leave this in your brewing room, which fits its theme alot better than having a Cauldron near an Enchanting Table setup.</li>
+  <li>Note: You can get Thick Potions from Fishing Extended too, but it's not a common drop, so I doubt people would rely on that for their supply of EXP Jars moving forward.</li>
+ </ul>
+ <li>Creating an EXP Jar now cost you an extra 50 Experience Points.</li>
+ <ul>
+  <li>This design is added to reinforce the "high risk high reward" moment mentioned before.</li>
+  <li>Experience point loss becomes less and less relevant the higher your level is, reducing its effects the more Experience an EXP Jar stores.</li>
+ </ul>
+ <li>New XPStorage Admin Book, and more customizability:</li>
+ <ul>
+  <li>EXP Jar Capacity: The max amount of experience an EXP Jar can hold. (default: 3000)</li>
+  <li>EXP Storing Cost: The amount of Experience used to make an EXP Jar. (default: 50)</li>
+  <li>Used Jar Mending: See if drinking EXP Jars repairs Mending gear.</li>
+  <li>Note: You might want to make a backup if you're going to experiment with really big numbers.</li>
+ </ul>
+ <li>New Advancements for XPStorage!</li>
+ <ul>
+  <li>1 is a tutorial one, the other is a small challenge.</li>
+ </ul>
+ <li>Fixed a bug where sometimes you'd lose 1 EXP point when you use XPStorage to store Experience.</li>
+ <ul>
+  <li>The fix is so that the 1 point (caused by MC-123270) is now left in your Experience bar instead.
+  <br>(In the old code, because I didn't know about MC-123270, that 1 point is lost entirely. Whoops!)</li>
+ </ul>
+</ul>
+<h1><span class="tooltip"><span class="tooltipText">Just me polishing some stuff in the background.</span>Non-gameplay changes:</span></h1>
+<ul>
+ <li>Codebase now runs on Scripter 3.1.</li>
+ <li><span>TheDiamondPlayables</span> is now colored in <span style="color: #00BBBB">dark aqua</span> by design. (grey-ish aqua?)</li>
+ <ul>
+  <li>The old design feels more vanilla, but it doesn't sit right with me.
+  <br>Seeing a gray TheDiamondPlayables just feel ... off.</li>
+ </ul>
+ <li>Added backwards compatibility for EXP Jars made with XPStorage 1.17x and 1.18x.</li>
+ <ul>
+  <li>Just so you can still use your stored Experience Jars, even if they are severely out of date.</li>
+ </ul>
+</ul>
+<p>PS: I really don't like <a href="https://bugs-legacy.mojang.com/browse/MC-70317">MC-70317</a>.</p>
