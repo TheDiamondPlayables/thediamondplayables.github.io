@@ -1,0 +1,19 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2024-10-26",
+ "hide_date": false
+}
+</script>
+
+<h1>Changes:</h1>
+<ul>
+ <li><span>Is now designed for Minecraft 1.21.2-1.21.3!</span></li>
+ <li>Added a recipe to <span>clear Bundles' colors with a Water Bucket</span>!</li>
+ <li>Undying a Candle no longer works if the Candle is already not dyed.</li>
+ <li>Fixed a bug that stops you from undying Candles if gamerule <code>doLimitedCrafting</code> is on.</li>
+ <ul>
+  <li>This doesn't apply retroactively to old worlds though.</li>
+  <li>If you're one of the rare ones who are affected by this, run <code>/advancement revoke @a only tdp:colored_dyeing/entry</code> to fix this issue.</li>
+ </ul>
+ <li>IHF files now load images online if it makes sense to do so, massively reducing filesizes.</li>
+</ul>
