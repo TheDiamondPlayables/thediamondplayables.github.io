@@ -1,0 +1,31 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2022-12-18",
+ "hide_date": false
+}
+</script>
+
+<h1>Changes:</h1>
+<ul>
+ <li>Reworked the inventory clearing mechanic to match the v18 counterpart. 
+ <br>(only affects villagers with trades in a 8 block radius from the player's position)</li>
+ <ul>
+  <li>Yes, I have a secret inventory clearing mechanic in Infinite Trades, more information below.</li>
+ </ul>
+</ul>
+<details>
+ <summary>So, why did I have a secret inventory clearing mechanic?</summary>
+ <ul>
+  <li>Due to a side-effect from a notorious Mojang bug that they will probably never fix, every time you trade with this datapack enabled, the villagers' inventory would double itself.</li>
+  <li>To stop a potentially big duping problem, I've decided to clear the villagers' inventories every time a trade is made.</li>
+  <ul>
+   <li>This only affects villagers with trades, so unemployed villagers or nitwits are completely unaffected by this mechanic.</li>
+   <li>This also only affects villagers within your interaction distance (which is about 8 blocks max) to further minimize the villager breeding problem so it affects as little cases as possible.</li>
+  </ul>
+  <li>I have made prototypes on potential solutions to the problem without having to add this mechanic, and while some of them worked, the implementation are either insanely laggy (especially in Multiplayer), or leaves irreversible effects on the Villagers themselves.</li>
+  <li>In the future, if I found a more ideal solution, I'll implement it in a later update.</li>
+ </ul>
+ <p>For now though, thank you for using Infinite Trades, and enjoy the update!</p>
+</details>
+<p>Also, I kinda forgot to include some notes in the description for Infinite Trades 
+about this tradeoff when I overhauled it so ... sorry about that.</p>
