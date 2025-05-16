@@ -1,0 +1,78 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-10-25",
+ "hide_date": false
+}
+</script>
+
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.20.2!</li>
+ <li>This update <b>introduces a lot of new recipes</b> for the Stonecutter.</li>
+ <ul>
+  <li>Most of these extends from the Partial Cutback rule as it was largely underdeveloped before.</li>
+ </ul>
+ <li>Cutting Bowls now give you only 1 Stick (previously 6).</li>
+ <ul>
+  <li>Originally I thought you'd get a Bowl from 3 Planks, but this isn't really the case.</li>
+ </ul>
+</ul>
+<h2>New Recipes:</h2>
+<ul>
+ <li>Pressure Plates and Buttons can now be cut back.</li>
+ <ul>
+  <li>Previously I thought this wouldn't make sense, but Signs can be cut back.</li>
+ </ul>
+ <li>Activator, Detector and Powered Rail can now be cut back into Ingots.</li>
+ <ul> 
+  <li>Rail can also be cut into 3 Iron Nuggets. (technically 54/16, but the manager takes whole numbers)</li>
+ </ul>
+ <li>Blast Furnace and Smoker can now be cutback.</li>
+ <li>Enchanted Books and Books now share the same recipes.</li>
+ <li>Minecarts and their variants (except TNT Minecarts) can now be cutback.</li>
+ <li>Clocks and Compasses can now be cutback.</li>
+ <ul>
+  <li>Cutting a Recovery Compass, however, will only give you Echo Shards.</li>
+ </ul>
+ <li>Repeaters, Comparators, Observers, Pistons, Dispensers and Droppers can now be cutback.</li>
+ <li>Redstone Lamp and Torch can now be cutback.</li>
+ <li>Hoppers can now be cutback.</li>
+ <ul>
+  <li>While this is a potential container, it's not often used as one, so I'll make an exception here.</li>
+ </ul>
+ <li>Iron Doors and Trapdoors can now be cut into Ingots.</li>
+ <li>Shield can now be cutback. You can only get 8 Iron Nuggets from this though.</li>
+ <li>Like Lanterns, Soul Lanterns can now be cutback as well.</li>
+ <li>Spectral Arrows can now be cut into Glowstone Dust.</li>
+ <li>Tripwire Hooks can now be cutback into 4 Iron Nuggets, or a Stick.</li>
+ <ul>
+  <li>Technically it's 9/2 and 3/2 respectively, but manager takes whole numbers.</li>
+  <li>As a result of this change, cutting Crossbows have also been changed.</li>
+ </ul>
+</ul>
+<p>Because of my <span class="tooltip"><span class="tooltipText">A custom-made tool that creates all possible recipes from the given rules.</span>Relationship Manager</span>, these got expanded into 67 new recipes, for a total of 686!</p>
+<h2>Partial Cutback details:</h2>
+<ul>
+ <li>Partial Cutback returns some of your ingredients back for cutting a crafted result.</li>
+ <ul> 
+  <li>The crafted item must be from a Crafting Table, and can't be tools or armor.</li>
+  <li>The crafted item must also be from Vanilla, or from my other packs.</li>
+  <li>The cutback must also make sense and wouldn't change Vanilla's design.</li>
+ </ul>
+ <li>Special notes:</li>
+ <ul>
+  <li>Recipes using especially rare items (Smithing Templates, Beacons, ...) can't be cutback.</li>
+  <li>If a crafting result and its ingredients have different obtaining methods, they can't be cutback.</li>
+  <li>Either way you slice it, edible items can't be made with the Sawblade.</li>
+  <li>Items using multiple craftable options can only be cut into what they all can make.</li>
+  <li>Andesite/Diorite/Granite can't be cutback to get a different block of that set.</li>
+  <li>Walls can't be cut to make the full Block version.</li>
+  <li>Containers (except Hoppers) can't be cut into materials because you'll always lose what's inside.</li>
+  <li>Scaffolding can't be used to cutback Bamboo - those 2 have entirely different properties.</li>
+  <li>Quartz Blocks can't make Quartz due to how different these 2 are in the way you get them.</li>
+ </ul>
+</ul>
+<p>PS: I've decided for now to not mess with the item amounts because I don't want to rewrite the entire Relationship Manager to account for this unexpected rule in this release, which'll take a long while.
+<br>Will think of this in an upcoming update though.</p>
+<p>Designing these rulesets take a long time, so if you can, please help me do more of this stuff on Patreon!
+<br>I'll be able to maintain these with better ideas, and make new projects so you can have more fun!</p>

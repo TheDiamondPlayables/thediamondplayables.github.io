@@ -1,0 +1,17 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2024-12-13",
+ "hide_date": false
+}
+</script>
+
+<p>I try to take care of all edge-cases in vanilla so you can have all the fun, even if you're in some wacky world with a wacky setting, and I actually missed a new one 1.21 (1.20.5 actually, but still). There are so much more of these since 1.20.5 - this is bound to happen at some point.</p>
+<h1>Changes:</h1>
+<ul>
+ <li>Fixed a critical bug causing <span>Sawblade Damage to not run properly if spawnChunkRadius is off</span>. To fix this:</li>
+ <ol>
+  <li>Run: <code>/gamerule spawnChunkRadius 1</code> for a second</li>
+  <li>Then, run: <code>/gamerule spawnChunkRadius 0</code> to turn it off again.</li>
+  <li>That should fix everything.</li>
+ </ol>
+</ul>

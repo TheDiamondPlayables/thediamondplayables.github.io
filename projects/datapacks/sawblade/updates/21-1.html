@@ -1,0 +1,97 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2024-10-20",
+ "hide_date": false
+}
+</script>
+
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.21 and 1.21.1!</li>
+ <li>Added <b>113 new recipes</b> to the Stonecutter! Here are the highlights:</li>
+ <ul>
+  <li>The Crafter can now be salvaged for parts!</li>
+  <li>Cut Copper can now make Copper Grates.</li>
+  <li>Chiseled Copper can be cut back into Cut Copper.</li>
+  <li>Copper Bulbs can be salvaged.</li>
+  <li>Copper Door, Copper Grate and Copper Trapdoor can be cut back into Ingots.</li>
+  <li>Tuff, Polished Tuff, Tuff Bricks, and Chiseled Tuff can be cut into eachother.</li>
+ </ul>
+ <li><span>Experience Orbs and Vexes can no longer be cut</span> by Stonecutters.</li>
+ <ul>
+  <li>The reasoning for these 2 is kinda similar, but I'll let you figure it out.</li>
+ </ul>
+ <li><span>Villagers now resist all damage</span> dealt by Stonecutters.</li>
+ <ul>
+  <li>They still act as if these actually hurt them though, because I find it funny.</li>
+ </ul>
+ <li><b>New in-game Settings</b> for Sawblade Damage:</li>
+ <ul>
+  <li><span>Damage Dealt</span>: Damage dealt per Stonecutter slice.</li>
+  <li><span>Villager Damage</span>: Damage dealt per Stonecutter slice on Villagers.</li>
+  <li><span>Damage Cycle</span>: The time between each Stonecutter slice.</li>
+  <li><span>Damage Knockback</span>: If this damage knocks you away from the Stonecutter.</li>
+  <li><span>Death Message</span>: If the Death Message is announced when someone dies to a Stonecutter.</li>
+ </ul>
+ <li><b>New Presets</b>:</li>
+ <ul>
+  <li><span>Classic</span>: Sawblade Damage, as it was designed.</li>
+  <li><span>Instacutter</span>: Instantly kills most entities with a hit of the blade.</li>
+  <li><span>Bouncy Blades</span>: All living things damaged by Stonecutter now bounce around like maniacs. Bouncy castle anyone?</li>
+ </ul>
+ <li>Sawblade's Death Messages are now more traceable in the server logs.</li>
+ <ul>
+  <li>Makes things easier to track what happened if you had to look through that thing.</li>
+ </ul>
+ <li>Bugfixes:</li>
+ <ul>
+  <li>Fixed a bug that <span>caused Stonecutters to not deal damage in Peaceful</span>.</li>
+  <li>Fixed a rare bug that <span>caused Stonecutters to announce death messages</span> before the victim actually dies.</li>
+ </ul>
+</ul>
+<h1>Extras:</h1>
+<ul>
+ <li>Added Admin Commands! To use these commands:</li>
+ <ul>
+  <li>Simply type <code>/function tdp.</code>, and the game should give you suggestions on what to use.
+  <br><b>Side note:</b> Any suggestions <b>with underscores followed by numbers</b> are <b>for internal use only</b> and won't work if run on their own.</li>
+  <li>Only those with the "Allow Commands" permission can use Admin Commands.</li>
+ </ul>
+ <li>A lot of filenames have been changed to properly organize everything.</li>
+ <ul>
+  <li>IDs have been removed and is now replaced by code names.</li>
+  <li>The format is now tdp:code_name/data, to reserve the old names for Admin Commands.</li>
+ </ul>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>Improved the look of info text messages.</li>
+ <li>Text files have been merged into one single Interactive Help File.</li>
+ <ul>
+  <li>I have to learn 3 new languages to get all this to work as well as it did. </li>
+  <li>Not the best at it yet, but it works well enough for now.</li>
+ </ul>
+ <li>The master background has been updated for major releases as always.</li>
+ <li>Codebase now uses Scripter 4.</li>
+</ul>
+<h1>Notes:</h1>
+<ul>
+ <li>I have considered cutting Copper Blocks into Doors/Trapdoors, but ultimately backed out on it.</li>
+ <ul>
+  <li>If the Stonecutter has more recipes like this, you'd lose gameplay value in having the Crafting Table and its upgrade, the Crafter.</li>
+  <li>Also because it doesn't make much sense logically - Stonecutter can cut it to make it look like Doors/Trapdoors, but looks aren't everything.</li>
+ </ul>
+ <li>I personally wouldn't consider Tuff to be something one can finely turn into Gravel, even though it would be consistent with the existing logic.</li>
+ <ul>
+  <li>In Vanilla, Tuff isn't renewable, so converting it into something that isn't Tuff just means that eventually you'd have no Tuff left.</li>
+  <li>Even if Tuff is pretty common stuff, this is still a possibility I needed to consider, and for options that have a potentially damaging application, it's best to not be the one who made that happen, ya know?</li>
+ </ul>
+ <li>An application of the 1.20.5's internal changes makes it possible to cut blocks into smaller versions of itself (displayed as heads), but that's not a part of Sawblade.</li>
+ <ul>
+  <li>Sawblade aims to improve the existing items' relationships by adding recipes that makes sense based on the game's logic, and making new head items and adding that here doesn't make a lot of sense.</li>
+  <li>I'm still doing something like this though as a separate pack later on down the line. It'll be a pretty interesting challenge, for sure.</li>
+ </ul>
+ <li>I tried to make it so that the Stonecutter only hits if you're actually standing on the Saw bit.</li>
+ <ul>
+  <li>Problem with this is that all the methods I got doesn't perform that well when scaled up. The performance loss would always prove too much to make this mechanic worth implementing.</li>
+  <li>I'll be back to this some other time, but for now implementing it is more trouble than it's really worth.</li>
+ </ul>
+</ul>
