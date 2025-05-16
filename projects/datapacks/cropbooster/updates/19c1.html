@@ -1,0 +1,73 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-03-07",
+ "hide_date": false
+}
+</script>
+
+<p>(Also known as the Booster Refresh Mega-Update)</p>
+<h1>Changes:</h1>
+<ul>
+ <li>CropBooster is now designed for Minecraft 1.19.3!</li>
+ <li>Added an upgrade function for v18 CropBooster users to upgrade to v19's system seamlessly.</li>
+ <ul>
+  <li>To upgrade existing CropBoosters, copy and run <code>/function tdp.513:upgrade_v19</code> in chat.</li>
+  <li>I don't want to let the game upgrade all the blocks automatically - it adds another processing layer that users starting from v19 doesn't really need, so it's a manual function instead.</li>
+  <li>Wish I'd thought of this for my earlier updates. It's just such a simple idea.</li>
+ </ul>
+ <li>Fixed an annoying sound issue where booster sounds would play as if it's a global event.</li>  
+ <li><span>Significantly slowed down boosting rates</span> to acceptable levels.</li>
+ <ul>
+  <li>Ideally, CropBooster farms should sit somewhere in the middle.
+  <br>Faster than regular farms, but not too fast that bone meal farms becomes obsolete by comparison.</li>
+  <li>It's also been redesigned so if you stack enough CropBoosters, you can definitely beat a Bone Meal farm in terms of speed, but by then you'll have different problems you need to worry about.</li>
+  <li>Point being: Making fast and efficient builds shouldn't be too easy, that'll take away from the fun.</li>
+ </ul>
+ <li>CropBooster's boosting ability <span>now boosts at different speeds</span> depending on the crop it's boosting.</li>
+ <ul>
+  <li>Crops with more growth stages get boosted more often, and vice versa.</li>
+  <li>Cocoa Pods are an exception to this rule due to how fast they grow already.</li>
+ </ul>
+ <li>Cactus and Sugar Cane now only grows up after having received 15 boosts.</li>
+ <ul>
+  <li>This is how vanilla does it, but old me didn't realize this, and these farms were stupidly overpowered because of that. Whoopsies!</li>
+ </ul>
+ <li>Composter level consumption rates have been increased. (25% -> 35% chance to lose per boost)</li>
+ <ul>
+  <li>Previous Composter consumption values meant that even if you use some of the crops gathered from CropBooster farms as fuel to grow more crops, you'd still end up with way too many crops.</li>
+  <li>Ironically this problem made CropBooster feel not as a excess plant remover that helps other plants, but rather a self-powered excess plant generator that gives you more excess plants.</li>
+ </ul>
+ <li><b>CropBooster now works on Sea Pickles</b>!</li>
+ <ul>
+  <li>Sea Pickles when boosted now adds more pickles to the block if more can be grown.
+  <br>Quick refresh: To grow Sea Pickles, you need a coral block below a waterlogged Sea Pickle.</li>
+  <li>No, they don't cause Sea Pickles to spread to other blocks. The boost isn't powerful enough for that.</li>
+ </ul>
+ <li>Advancement Update:</li>
+ <ul>
+  <li>Poop is the new Plant Food: Throw a Bone Block into an empty Composter to boost nearby crops! (Previously "Boosting Season")</li>
+ </ul>
+ <li>Extra Changes:</li>
+ <ul>
+  <li>Boosting Effects are now visible even in Minimal particles setting.</li>
+  <ul>
+   <li>This is to make sure everyone knows that the CropBooster is working, as some cases are much more confusing without these particles.</li>
+  </ul>
+  <li>CropBooster placement and boosting sound are now both in the Block sound channel.</li>
+  <ul>
+   <li>That's the most reasonable position I could place that in.</li>
+   <li>If you want to control how loud these sounds makes for you, you can change it by the Block slider in the Settings menu. Options > Music & Sounds > "Blocks" slider.</li>
+  </ul>
+ </ul>
+ <li>Rewritten the entire codebase for CropBooster.</li>
+ <ul>
+  <li>I had to do it anyway. You'll know why if you've been following on my Discord.</li>
+  <li>A side effect of this is the rewritten code is a bit more optimized as well, so CropBooster should run pretty efficiently in this version.</li>
+ </ul>
+ <li>CropBooster no longer boosts crops which are supported by itself.</li>
+ <ul>
+  <li>It's a lot more effort than it's worth performance-wise.</li>
+  <li>Plus, this mechanic when used in game doesn't look or feel natural for CropBooster, and stacking CropBooster is possible with other methods anyway.</li>
+  <li>So yeah, I've decided to scrap the thing entirely.</li>
+ </ul>
+</ul>

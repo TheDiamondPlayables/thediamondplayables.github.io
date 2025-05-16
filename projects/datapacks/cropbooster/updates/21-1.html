@@ -1,0 +1,84 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2024-12-02",
+ "hide_date": false
+}
+</script>
+
+<p>Comments from me at the time: I left this update for later because there were some limitations with the project that I've always wanted to fix. I also wanted to add customizations to this project to better fit your worlds. 
+<br>Also, sorry that it took me this long to get it done. I really want to have more time to keep on doing things like this, but <a href="https://discord.com/channels/553204669560913922/868462025070751744/1310939890309009472">life stuff is pretty hard right now</a>, which is what's really been dragging this back. You can help me get out of those problems (so I can get stuff out much quicker) <a href="https://thediamondplayables.com/donate">over on Patreon</a> - I really need your support there if you can afford it. Anyways, here are the changes:</p>
+<h1>CropBooster tweaks:</h1>
+<ul>
+ <li>The CropBooster <b>is now craftable</b> by placing a Composter below a Bone Block!</li>
+ <ul>
+  <li>This replaces the previous "throw a Bone Block in the Composter" setup method.</li>
+  <li>"<span>Boosting Season</span>" has also been reworked to account for this change.</li>
+ </ul>
+ <li>Note that CropBoosters need to be <span>placed in your line of sight</span> to work properly.</li>
+ <ul>
+  <li>There's a sound cue and some particles above the block to let you know when it works.</li>
+ </ul>
+ <li>Breaking a CropBooster <span>now drops it as an item</span>, which lets you freely move it around!</li>
+ <ul>
+  <li>A side effect of this: CropBooster might not work as well with packs that modifies the Composter's block drop. I'll tweak this if there is a better workaround.</li>
+ </ul>
+ <li>The CropBooster block also has some tweaked functionality, but <b>all these are side-effects and shouldn't be considered as mechanics</b>.</li>
+</ul>
+<h1>Boosting tweaks:</h1>
+<ul>
+ <li><b>CropBoosters no longer works on Sea Pickles.</b></li>
+ <ul>
+  <li>Gameplay wise, setting it up is far too costly when compared to the benefits it brings.</li>
+  <li>Also because you really can't boost something that doesn't grow on its own.</li>
+  <li>As always, feel free to leave your opinions on any of my decisions <a href="https://thediamondplayables.com/contact">on Discord</a>!</li>
+ </ul>
+ <li>CropBoosters <b>now encourages maxed Melon/Pumpkin plants to deliver its crops</b>!</li>
+ <li><b>CropBoosters' compost use has also been increased</b>. Previous values are still too powerful.</li>
+ <li>Major improvements to project's boosting code performance!</li>
+ <li>Reworked boosted crops' growth rates to make it more reliant of the value it delivers.</li>
+ <li>Tweaked <b>Glow Berry chance from 12% to 20%</b> (about twice Vanilla's berry rates).</li>
+ <ul>
+  <li>Makes the idea a bit more appealing if you're doing something like that.</li>
+ </ul>
+</ul>
+<h1>Admin Settings:</h1>
+<p>Added <span class="tooltip"><span class="tooltipText"><code>/function tdp.config:cropbooster</code></span>Admin Settings</span> to CropBooster, which <b>lets you tweak things directly in-game</b> to fit your worlds! Available options are:</p>
+<ul>
+ <li><span>Boost Range</span>: Controls how wide the boosting square is.</li>
+ <li><span>Boost Rate</span>: Percentage, controls how often CropBoosters boost crops!</li>
+ <li><span>Boost Loss Rate</span>: Percentage, controls how often the CropBooster uses up Compost for boosts.</li>
+ <li><span class="tooltip"><span class="tooltipText"><span>There is one for each supported plant!</span></span>Boost Growth Rate</span>: Percentage which controls how fast the crop grows when boosted.</li>
+ <li><span>Glow Berries' Fruit Rate</span>: Percentage, controls how often a Glow Berry is made when boosted by CropBooster.</li>
+</ul>
+<h1>Extras:</h1>
+<ul>
+ <li>Added Admin Commands! To use these commands:</li>
+ <ul>
+  <li>Simply type <code>/function tdp.</code>, and the game should give you suggestions on what to use.
+  <br><b>Side note:</b> Any suggestions <b>with underscores followed by numbers</b> are <b>for internal use only</b> and won't work if run on their own.</li>
+  <li>Only those with the "Allow Commands" permission can use Admin Commands.</li>
+ </ul>
+ <li>Admins can also give themselves custom items added by my projects with the new give Command!</li>
+ <ul>
+  <li>Syntax: <code>/function tdp.give:cropbooster/&ltitem&gt {count:&lt1-6400&gt}</code></li>
+ </ul>
+ <li>Fixed several inconsistencies between boosted Bamboo and regular Bamboo in specific cases:</li>
+ <ul>
+  <li>Bamboo sizes not being large if boosted when tall enough.</li>
+  <li>Bamboo leaves duplicate in certain growth states when modified.</li>
+ </ul>
+ <li>A lot of filenames have been changed to properly organize everything.</li>
+ <ul>
+  <li>IDs have been removed and is now replaced by code names.</li>
+  <li>The format is now tdp:code_name/data, to reserve the old names for Admin Commands.</li>
+ </ul>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>Improved the look of info text messages.</li>
+ <li>Text files have been merged into one single Interactive Help File.</li>
+ <ul>
+  <li>I have to learn 3 new languages to get all this to work as well as it did. </li>
+  <li>Not the best at it yet, but it works well enough for now.</li>
+ </ul>
+ <li>The master background has been updated for major releases as always.</li>
+ <li>Codebase now uses Scripter 4.</li>
+</ul>

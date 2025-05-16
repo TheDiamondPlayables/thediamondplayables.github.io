@@ -1,0 +1,34 @@
+<script id="version_info" type="application/json">
+{
+ "date": "1970-01-01",
+ "hide_date": true
+}
+</script>
+
+<p>(Also known as the Make or Break update)</p>
+<h1>Changes:</h1>
+<ul>
+ <li>Now officially designed to work for Minecraft 1.19x!</li>
+ <li>Blocks replaced if you place a Ladder on it <span>are now also replaced</span> if placed with DropLadder.</li>
+ <ul>
+  <li>Some examples: Grass, Vines, Sculk Veins, ... (21 more)</li>
+ </ul>
+ <li>Ladders placed by DropLadder now causes vibrations, with a value of 13.</li>
+ <ul>
+  <li>I know placing blocks gives a redstone value of 12.
+  <br>Making it match that is just way more trouble than it's worth.</li>
+ </ul>
+ <li>Added Chainbreaking:</li>
+ <ul>
+  <li>Ladder blocks when broken <b>now breaks nearby ladders</b> if they're not properly supported.</li>
+  <li>Chainbreaking will not work if Ladders can't drop anything, or drops something else.
+  <br>(I used block drop detection to make this work - lightest option performance wise)</li>
+ </ul>
+ <li>Fixed a bug where Ladders would place itself when broken underneath another Ladder block.</li>
+ <li>DropLadder will now ignore Ladder items that have touched the ground.</li>
+ <ul>
+  <li>Should improve performance in cases where there's many ladder items on the ground.</li>
+ </ul>
+ <li>Updated advancements background and colors of most text found in the pack.</li>
+ <li>Codebase now uses Scripter 3.</li>
+</ul>
