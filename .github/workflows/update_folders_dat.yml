@@ -1,0 +1,64 @@
+name: Update _folders.txt
+
+on:
+ push:
+  branches: [main,master]
+ workflow_dispatch:
+
+jobs:
+ update_files:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checks out repo.
+     uses: actions/checkout@v4
+     with:
+      token: ${{ secrets.permissions_token }}
+      fetch-depth: 0
+
+   - name: Determine directories to update
+     id: updated_dirs
+     run: |
+      # Find all folders if triggered manually, otherwise find changed folders.
+      if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+       dirs=()
+       while IFS= read -r -d '' file; do
+        dir=$(dirname "$file")
+        dirs+=("$dir")
+       done < <(find . -name "_folders.txt" -print0)
+      else
+       changed_files=$(git diff --name-only HEAD^ HEAD)
+       dirs=()
+       for file in $changed_files; do
+        dir=$(dirname "$file")
+        if [[ ! " ${dirs[@]} " =~ " ${dir} " ]]; then
+         dirs+=("$dir")
+        fi
+       done
+      fi
+
+      echo "dirs=$(printf '%s\n' "${dirs[@]}" | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
+
+   - name: Update _folders.txt in target directories
+     run: |
+      # Convert JSON array to bash array
+      dirs_json='${{ steps.updated_dirs.outputs.dirs }}'
+      readarray -t dirs < <(echo "$dirs_json" | jq -r '.[]')
+      
+      for dir in "${dirs[@]}"; do
+       if [[ -f "${dir}/_folders.txt" ]]; then
+        (
+         cd "$dir" || exit
+         find . -maxdepth 1 -type d ! -name "_folders.txt" -printf "%P\n" | sort > _folders.txt
+        )
+       fi
+      done
+
+   - name: Commit changes if any
+     run: |
+      git config --global user.name "GitHub Actions"
+      git config --global user.email "actions@github.com"
+      if [[ -n "$(git status --porcelain)" ]]; then
+       git add -A
+       git commit -m "Automatically update _folders.txt"
+       git push
+      fi
