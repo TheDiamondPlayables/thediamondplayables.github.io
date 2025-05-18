@@ -48,7 +48,7 @@ jobs:
        if [[ -f "${dir}/_folders.txt" ]]; then
         (
          cd "$dir" || exit
-         find . -maxdepth 1 -type d ! -name "_folders.txt" -printf "%P\n" | sort > _folders.txt
+         find . -maxdepth 1 -type d -printf "%P\n" | sort > _folders.txt
         )
        fi
       done
