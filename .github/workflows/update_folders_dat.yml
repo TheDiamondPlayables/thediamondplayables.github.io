@@ -24,7 +24,7 @@ jobs:
        while IFS= read -r -d '' file; do
         dir=$(dirname "$file")
         dirs+=("$dir")
-       done < < (find . -name "_folders.txt" -print0)
+       done < <(find . -name "_folders.txt" -print0)
       else
        folders=$(git diff-tree --diff-filter=ADR -r --name-only --no-commit-id HEAD)
 
