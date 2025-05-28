@@ -22,19 +22,20 @@ jobs:
       git fetch origin ${{ github.event.before }} --depth=1
       dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep . | while read -r path; do
        while [ "$path" != "." ] && [ "$path" != "/" ]; do
-        echo "$path"
+        echo "$(dirname "$path")"
         path=$(dirname "$path")
        done
       done | sort -u)
-      
-      echo -e "changed_dirs<<EOF\n$dirs\nEOF" >> $GITHUB_OUTPUT
+
+      echo "changed_dirs=$(echo "$dirs" | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
 
    - name: Update _folders.txt (only changed dirs)
      if: github.event_name == 'push'
      run: |
-      for dir in ${{ steps.changes.outputs.changed_dirs }}; do
-       if [ -f "$dir/_folders.txt" ]; then
-        find "$dir" -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | sort > "$dir/_folders.txt"
+      for dir in ${{ fromJson(steps.changes.outputs.changed_dirs) }}; do
+       parent_dir=$(dirname "$dir")
+       if [ -f "$parent_dir/_folders.txt" ]; then
+        find "$parent_dir" -mindepth 1 -maxdepth 1 -type d -not -name "_*" -printf "%f\n" | sort > "$parent_dir/_folders.txt"
        fi
       done
 
