@@ -15,32 +15,7 @@ jobs:
       token: ${{ secrets.permissions_token }}
       fetch-depth: 0
 
-   - name: Get changed directories (push only)
-     if: github.event_name == 'push'
-     id: changes
-     run: |
-      git fetch origin ${{ github.event.before }} --depth=1
-      dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep . | while read -r path; do
-       while [ "$path" != "." ] && [ "$path" != "/" ]; do
-        echo "$(dirname "$path")"
-        path=$(dirname "$path")
-       done
-      done | sort -u)
-
-      echo "changed_dirs=$(echo "$dirs" | jq -R -s -c 'split("\n")[:-1]')" >> $GITHUB_OUTPUT
-
-   - name: Update _folders.txt (only changed dirs)
-     if: github.event_name == 'push'
-     run: |
-      for dir in ${{ fromJson(steps.changes.outputs.changed_dirs) }}; do
-       parent_dir=$(dirname "$dir")
-       if [ -f "$parent_dir/_folders.txt" ]; then
-        find "$parent_dir" -mindepth 1 -maxdepth 1 -type d -not -name "_*" -printf "%f\n" | sort > "$parent_dir/_folders.txt"
-       fi
-      done
-
-   - name: Update all _folders.txt (manual dispatch)
-     if: github.event_name == 'workflow_dispatch'
+   - name: Update all _folders.txt
      run: |
       find . -type f -name "_folders.txt" | while read -r file; do
        dir=$(dirname "$file")
