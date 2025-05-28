@@ -27,7 +27,7 @@ jobs:
      if: github.event_name == 'push'
      run: |
       for dir in ${{ steps.changes.outputs.changed_dirs }}; do
-       echo dir
+       echo "$dir"
        if [ -d "$dir" ] && [ -f "$dir/_folders.txt" ]; then
         find "$dir" -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | sort > "$dir/_folders.txt"
        fi
