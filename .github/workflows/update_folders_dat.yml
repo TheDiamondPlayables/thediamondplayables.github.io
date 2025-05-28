@@ -45,5 +45,5 @@ jobs:
       git config --global user.name "github-actions"
       git config --global user.email "github-actions@github.com"
       git add .
-      git diff --cached --quiet || git commit -m "Update _folders.txt"
+      git commit -m "Update _folders.txt"
       git push
