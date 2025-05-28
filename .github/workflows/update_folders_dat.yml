@@ -20,15 +20,14 @@ jobs:
      id: changes
      run: |
       git fetch origin ${{ github.event.before }} --depth=1
-      dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | xargs -n1 dirname | sort -u)
-      echo "changed_dirs<<EOF" >> $GITHUB_OUTPUT
-      for d in $dirs; do
-       while [ "$d" != "." ] && [ "$d" != "/" ]; do
-        echo "$d"
-        d=$(dirname "$d")
+      dirs=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep . | while read -r path; do
+       while [ "$path" != "." ] && [ "$path" != "/" ]; do
+        echo "$path"
+        path=$(dirname "$path")
        done
-      done | sort -u
-      echo "EOF" >> $GITHUB_OUTPUT
+      done | sort -u)
+      
+      echo -e "changed_dirs<<EOF\n$dirs\nEOF" >> $GITHUB_OUTPUT
 
    - name: Update _folders.txt (only changed dirs)
      if: github.event_name == 'push'
