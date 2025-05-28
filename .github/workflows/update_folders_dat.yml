@@ -24,19 +24,31 @@ jobs:
        while IFS= read -r -d '' file; do
         dir=$(dirname "$file")
         dirs+=("$dir")
-       done < <(find . -name "_folders.txt" -print0)
+       done < < (find . -name "_folders.txt" -print0)
       else
-       changed_files=$(git diff --name-only HEAD^ HEAD)
+       folders=$(git diff-tree --diff-filter=ADR -r --name-only --no-commit-id HEAD)
+
+       # Extract all unique parent folders from the changed folders
        dirs=()
-       for file in $changed_files; do
-        dir=$(dirname "$file")
-        if [[ ! " ${dirs[@]} " =~ " ${dir} " ]]; then
-         dirs+=("$dir")
-        fi
+       for folder in $folders; do
+        # Remove filename if path is to a file (leaving just directory)
+        dir_path=$(dirname "$folder")
+        # Split path into components and build parent folders
+        IFS='/' read -ra path_parts <<< "$dir_path"
+        current_path=""
+        
+        for part in "${path_parts[@]}"; do
+         if [ -n "$part" ]; then
+          current_path="${current_path}/${part}"
+          # Remove leading slash
+          clean_path="${current_path#/}"
+          dirs+=("$clean_path")
+         fi
+        done
        done
       fi
 
-      echo "dirs=$(printf '%s\n' "${dirs[@]}" | jq -R -s -c 'split("\n")[:-1]')" >> "$GITHUB_OUTPUT"
+      echo "dirs=$(printf "%s\n" "${dirs[@]}" | sort -u | tr '\n' ',' | sed 's/,$//')" >> "$GITHUB_OUTPUT"
 
    - name: Update _folders.txt in target directories
      run: |
