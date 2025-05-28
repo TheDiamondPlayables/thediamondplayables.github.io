@@ -27,6 +27,7 @@ jobs:
      if: github.event_name == 'push'
      run: |
       for dir in ${{ steps.changes.outputs.changed_dirs }}; do
+       echo dir
        if [ -d "$dir" ] && [ -f "$dir/_folders.txt" ]; then
         find "$dir" -mindepth 1 -maxdepth 1 -type d -printf "%f\n" | sort > "$dir/_folders.txt"
        fi
@@ -45,5 +46,5 @@ jobs:
       git config --global user.name "github-actions"
       git config --global user.email "github-actions@github.com"
       git add .
-      git commit -m "Update _folders.txt"
+      git diff --cached --quiet || git commit -m "Update _folders.txt"
       git push
