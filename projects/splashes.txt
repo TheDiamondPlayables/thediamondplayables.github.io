@@ -1,4 +1,3 @@
-
 "Inspect element" now hits me differently.
 "Notice me, Mojang!"
 Ad-free by design. I hate ads.
@@ -47,3 +46,4 @@ This isn't the text you're looking for.
 What are the odds that you'll see this? Actually, never tell me the odds.
 You're seeing this the same way I am.
 No extra installations needed for this.
+What happens if a splash text gets just too long for the bar? This is what you'll see.
