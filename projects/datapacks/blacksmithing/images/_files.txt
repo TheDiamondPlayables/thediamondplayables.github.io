@@ -1,1 +1,5 @@
+anvil_recipes.jpg
+captions.json
+no-too-expensive.jpg
+title.jpg
 title.png
