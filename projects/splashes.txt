@@ -53,3 +53,8 @@ I love putting tutorials in this.
 There's always something you don't know.
 This project is much bigger than I once thought. Worth it though.
 You can click on images in galleries to see it better.
+I don't ship things I know can be improved.
+I'm pretty happy with this thing now.
+Two reworks later, this file is what we got.
+Search bar is much quicker now.
+Custom zooming behavior!
