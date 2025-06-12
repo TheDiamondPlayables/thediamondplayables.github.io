@@ -6,6 +6,7 @@ At least this doesn't rely on Minecraft updates to work.
 Backup fonts included.
 Bet you weren't expecting this, huh?
 Built-in search bar is just better.
+Custom zooming behavior!
 Dark patterns? What are those?
 Devil's in the details.
 Have you joined my Discord Server?
@@ -15,18 +16,24 @@ Have you tried using the Enter key on the Search bar?
 Hey, you actually read this thing!
 Hopefully this will have been worth the wait.
 I can use AI for this, but it won't look as nice.
+I don't ship things I know can be improved.
+I got this part from an online source.
 I hate that money is always needed.
 I have no cookies to track you with.
+I have plans for all this. Wish I have more time to pull it off though.
 I learned 3 different languages just to do this.
 I lost count of the test runs.
+I love putting tutorials in this.
 I want to do this more often.
 I wouldn't think of this as a website.
 I'm not the best with words.
+I'm pretty happy with this thing now.
 Late is just for a little while. Suck is forever.
 Losing money since 2018!
 Making this took longer than I thought it would.
 My main font is Rockwell. I just like the texture.
 No evil designs here.
+No extra installations needed for this.
 No! Try not. Do. Or do not. There is no try.
 None of your extensions work here. I think.
 Now with better animations!
@@ -36,25 +43,21 @@ RIP regular text files.
 Reload this site and I'm gone.
 Reopen this file, something's wrong.
 Sadly, I need money to live.
+Search bar is much quicker now.
+Search bar used to take ages previously. Three seconds? What is this?
 Secrets secrets secrets ...
 Started from text files and now we're here.
 Test description please ignore.
 TheDiamondPlayables is just one person.
+There's always something you don't know.
 This is a rare high moment.
 This is called a splash text.
+This is still readable on vertical screens.
 This isn't the text you're looking for.
-What are the odds that you'll see this? Actually, never tell me the odds.
-You're seeing this the same way I am.
-No extra installations needed for this.
-What happens if a splash text gets just too long for the bar? This is what you'll see.
-I got this part from an online source.
-I have plans for all this. Wish I have more time to pull it off though.
-I love putting tutorials in this.
-There's always something you don't know.
 This project is much bigger than I once thought. Worth it though.
-You can click on images in galleries to see it better.
-I don't ship things I know can be improved.
-I'm pretty happy with this thing now.
+This should work even if your Internet sucks.
 Two reworks later, this file is what we got.
-Search bar is much quicker now.
-Custom zooming behavior!
+What are the odds that you'll see this? Actually, never tell me the odds.
+What happens if a splash text gets just too long for the bar? This is what you'll see.
+You can click on images in galleries to see it better.
+You're seeing this the same way I am.
