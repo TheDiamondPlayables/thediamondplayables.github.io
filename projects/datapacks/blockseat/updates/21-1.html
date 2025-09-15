@@ -1,0 +1,110 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2025-09-16",
+ "hide_date": false
+}
+</script>
+
+<p>Who woulda thought a pack that lets you sit anywhere be this complex?
+<br>It doesn't have to be, sure, but that just means there's room for improvement, and improving it just takes you to where we are now. Anyways, here are the changes:</p>
+
+<h1>Changes:</h1>
+<ul>
+ <li><span>Is now designed for Minecraft 1.21-1.21.1</span>!</li>
+ <li><b>Improved how sitting works</b>:</li>
+ <ul>
+  <li>In order to sit, simply <span>crouch twice in a short time</span> to start sitting!</li>
+  <li>You can see why I changed it again - distinct, easy to do and doesn't require clearing your hands.</li>
+  <li>As always, I'll improve the methods whenever I can think of a better way, and this one seems promising so far ... </li>
+ </ul>
+ <li><b>Upgraded seat placement position</b>, letting you sit in a lot more places!</li>
+ <ul>
+  <li>I've added <span>8 new spots per block</span>, which'll be placed when you stand close to the edge of blocks.</li>
+  <li>Placement is <span>center-focused</span>, so if you're closer to the block's center, that's where the seat is.
+  <br>If you're closer to the edge of blocks, cushions will be placed there instead!</li>
+ </ul>
+ <li>You can now <b>move cushions around</b> by hitting your Use key on them while crouched!</li>
+ <ul>
+  <li>Where cushions are repositioned to <span>depends on where you're looking</span> at.</li>
+  <li>They'll silently fail if you wanted to place a seat in a bad spot.</li>
+  <li>These options let you set where you want to sit for the more complex set of block positions.</li>
+ </ul>
+ <li><b>New sitting effects</b>:</li>
+ <ul>
+  <li>New sounds for sitting, seat placement, and standing up!</li>
+  <li>New particles when a seat is removed!</li>
+  <li>I can't believe I missed these little details, but it adds a lot more life to the pack.</li>
+ </ul>
+ <li><b>Added Admin Settings</b>, which lets you tweak some aspects of the new mechanics:
+ <br>To tweak these, run <code>/function tdp.config:blockseat</code></li>
+ <ul>
+  <li><span>Crouch Delay</span>: Sets how long between crouches to register a double crouch.</li>
+  <ul>
+   <li>Counts in <span class=tooltip><span class=tooltipText>1/20 seconds</span>ticks</span>. Defaults to <span class=tooltip><span class=tooltipText>0.5 seconds</span>10</span>.</li>
+   <li>Do note that the game <b>requires at least a 1-2 tick gap</b> to register an uncrouch, so values too low can be hard to use.</li>
+  </ul>
+  <li><span>Chest Blocked</span>: Chests can be locked by sitting on them.</li>
+  <ul>
+   <li>True/False. True by default.</li>
+  </ul>
+  <li><span>Seat Effects</span>: Adds sounds and particles to BlockSeat's cushions.</li>
+  <ul>
+   <li>True/False. True by default. Turn off if you like the quieter feel.</li>
+  </ul>
+ </ul>
+ <li>"Time to Sit Down" advancement has been reset to teach players how to sit again.</li>
+ <ul>
+  <li>The description has also been tweaked to reflect the new sitting method.</li>
+ </ul>
+ <li>New advancement: "Cushion Mover"</li>
+ <ul>
+  <li>Move a seat by pressing your Use key on a seat while crouched.</li>
+ </ul>
+ <li>Fixed a bug causing Chests to be locked permanently if someone logged out while sitting on it.</li>
+ <ul>
+  <li><b>Existing cases won't be fixed</b> mainly because you can just replace the affected blocks yourself.
+  <br>Or choose not to and keep a piece of history with you. I won't judge.</li>
+ </ul>
+ <li>Overhauled BlockSeat's internal execution to support the new mechanics.</li>
+ <ul>
+  <li>This means there'll be a lot of weird little differences to watch out for.</li>
+  <li>Most of these won't affect the majority of players, but I thought you should know about it.</li>
+ </ul>
+ <li>Reduced BlockSeat's reliance on fixed block sets.</li>
+ <ul>
+  <li>This should make the pack work better with blocks added via mods, but no guarantees!</li>
+ </ul>
+</ul>
+
+<h1>Extras:</h1>
+<ul>
+ <li>Added Admin Commands! To use these commands:</li>
+ <ul>
+  <li>Simply type <code>/function tdp.</code>, and the game should give you suggestions on what to use.
+  <br><b>Side note:</b> Any suggestions <b>with underscores followed by numbers</b> are <b>for internal use only</b> and won't work if run on their own.</li>
+  <li>Only those with the "Allow Commands" permission can use Admin Commands.</li>
+ </ul>
+ <li>A lot of filenames have been changed to properly organize everything.</li>
+ <ul>
+  <li>IDs have been removed and is now replaced by code names.</li>
+  <li>The format is now <code>tdp:code_name/data</code>, to reserve the old names for Admin Commands.</li>
+ </ul>
+ <li>After 6 years of making datapacks, <span>we finally have icons now!</span></li>
+ <li>Improved the look of info text messages.</li>
+ <li>Text files have been merged into one single Interactive Help File.</li>
+ <ul>
+  <li>I have to learn 3 new languages to get all this to work as well as it did. </li>
+  <li>Not the best at it yet, but it works well enough for now.</li>
+ </ul>
+ <li>The master background has been updated for major releases as always.</li>
+ <li>Codebase now uses Scripter 4.</li>
+</ul>
+
+<h1>Dev Notes:</h1>
+<ul>
+ <li>I tried to support different seats based on player scales, but it wasn't worth adding.</li>
+ <ul>
+  <li>No matter what I did, it always went past the performance budget, especially the giant seats.</li>
+  <li>Also because the bigger something is, the more likely it is to be bugged out when combined with the game's other technical mechanics like chunk loading.</li>
+ </ul>
+</ul>
