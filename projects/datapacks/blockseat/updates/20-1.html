@@ -1,0 +1,55 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-08-11",
+ "hide_date": false
+}
+</script>
+
+<p>(This update was dropped 3 days earlier <a href="https://thediamondplayables.com/donate">for Iron Patrons</a>)</p>
+<p>I've reworked how BlockSeat works with a better approach!
+<br>If you have any questions about this, let me know about it <a href="https://thediamondplayables.com/contact">on Discord</a>. Have fun!</p>
+
+<h1>Additions:</h1>
+<ul>
+ <li>The cushion is back, lads!</li>
+ <ul>
+  <li>If you sit with nothing on (even in your offhand), you'll now immediately make a new cushion!</li>
+  <li>Cushion placement differs depends on where you're sitting in.</li>
+ </ul>
+ <li>Crouching in the edge of blocks now places cushions in a more accurate height!</li>
+ <ul>
+  <li>I got quite a few iterations on this before, but none of them were efficient enough for shipping.</li>
+  <li>Finally got a pretty good solution though!</li>
+ </ul>
+ <li>New sitting particles!</li>
+</ul>
+
+<h1>Changes:</h1>
+<ul>
+ <li><a href="#20-1_new_sitting">Reworked sitting mechanics</a>!</li>
+ <ul>
+  <li><b>If you'd have to crouch alot for non-sitting reasons, BlockSeat shouldn't affect your game.</b></li>
+  <li>This was the main goal for BlockSeat's design, but past iterations wasn't that great.</li>
+  <li>The new iteration works much more efficiently too, so that's a bonus.</li>
+ </ul>
+ <li>Cushion placement now works well on fences!</li>
+ <li>Cushion placement now also works well on block edges!</li>
+ <li>Fixed a bug causing players to clip through the floor when if they sit while crouched.</li>
+ <ul>
+  <li>Sorry for the wait on this patch.</li>
+  <li>I knew I had to rework the entire system anyway so I figured I'd put this in with that as well.</li>
+  <li>Just didn't expected it to take this long, ya know?</li>
+ </ul>
+</ul>
+
+<h2 id="20-1_new_sitting">New sitting mechanics:</h2>
+<ul>
+ <li>Simply crouch <b>with nothing in your inventory</b>.</li>
+ <ul>
+  <li>A cushion will appear that lets you sit on it, like you do in past versions.</li>
+  <li>Or you can hit the seat to remove it, if you don't want to sit right now.</li>
+  <li>I've basically scrapped the items filter at this point. Works much better without one is what I find.</li>
+ </ul>
+</ul>
+<p>Note: The cushion won't spawn again until you've started crouching again. 
+<br>This should make it a lot less annoying for cases where you'd need to use crouch for non-sitting reasons.</p>
