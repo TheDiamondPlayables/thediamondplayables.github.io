@@ -10,7 +10,7 @@
 
 <h1>Changes:</h1>
 <ul>
- <li><span>Is now designed for Minecraft 1.21-1.21.1</span>!</li>
+ <li>Is now designed for Minecraft 1.21-1.21.1!</li>
  <li><b>Improved how sitting works</b>:</li>
  <ul>
   <li>In order to sit, simply <span>crouch twice in a short time</span> to start sitting!</li>
@@ -40,7 +40,7 @@
  <ul>
   <li><span>Crouch Delay</span>: Sets how long between crouches to register a double crouch.</li>
   <ul>
-   <li>Counts in <span class=tooltip><span class=tooltipText>1/20 seconds</span>ticks</span>. Defaults to <span class=tooltip><span class=tooltipText>0.5 seconds</span>10</span>.</li>
+   <li>Counts in <span class=tooltip><span class=tooltipText>1 tick = 1/20 seconds</span>ticks</span>. Defaults to <span class=tooltip><span class=tooltipText>10 * 1/20 = 0.5 seconds</span>10</span>.</li>
    <li>Do note that the game <b>requires at least a 1-2 tick gap</b> to register an uncrouch, so values too low can be hard to use.</li>
   </ul>
   <li><span>Chest Blocked</span>: Chests can be locked by sitting on them.</li>
@@ -52,18 +52,17 @@
    <li>True/False. True by default. Turn off if you like the quieter feel.</li>
   </ul>
  </ul>
- <li>"Time to Sit Down" advancement has been reset to teach players how to sit again.</li>
+ <li><span>"Time to Sit Down" advancement has been reset</span> to teach players how to sit again.</li>
  <ul>
   <li>The description has also been tweaked to reflect the new sitting method.</li>
  </ul>
- <li>New advancement: "Cushion Mover"</li>
+ <li><b>New advancement: "Cushion Mover"</b></li>
  <ul>
   <li>Move a seat by pressing your Use key on a seat while crouched.</li>
  </ul>
  <li>Fixed a bug causing Chests to be locked permanently if someone logged out while sitting on it.</li>
  <ul>
-  <li><b>Existing cases won't be fixed</b> mainly because you can just replace the affected blocks yourself.
-  <br>Or choose not to and keep a piece of history with you. I won't judge.</li>
+  <li><b>Existing cases won't be fixed</b> mainly because you can just replace the affected blocks yourself. Or choose not to and keep a piece of history with you. I won't judge.</li>
  </ul>
  <li>Overhauled BlockSeat's internal execution to support the new mechanics.</li>
  <ul>
