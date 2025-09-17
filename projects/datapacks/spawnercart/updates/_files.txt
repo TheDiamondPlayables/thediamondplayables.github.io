@@ -15,5 +15,8 @@
 21d1.html
 21d2.html
 21e1.html
+21e2.html
 21f1.html
+21f2.html
 21g1.html
+21g2.html
