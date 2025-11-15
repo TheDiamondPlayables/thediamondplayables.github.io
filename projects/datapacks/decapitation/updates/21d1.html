@@ -1,0 +1,41 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2025-11-15",
+ "hide_date": false
+}
+</script>
+
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.21.4! (Ported from Version 21b1).</li>
+ <li>Changed background and icon to match current game drop's theme.</li>
+ <li>Added Creaking Head, which you get by breaking a Creaking Heart while its Creaking is active.</li>
+ <ul>
+  <li>Fortune is used instead of Looting in order to boost the head's drop rate.</li>
+  <li>All Creaking sounds can be found while brushing it.</li>
+ </ul>
+ <li>Added Creaking imitation sound to Parrot Heads.</li>
+ <li>Added new Settings controlling how Creaking Heads drop in special scenarios.</li>
+ <ul>
+  <li>Useful if you have a mod/datapack that controls specific mob griefing methods separately.</li>
+ </ul>
+</ul>
+
+<h1>Creaking Head Details:</h1>
+<ul>
+ <li>Creaking Head's drop sources are applied <span tabindex=0 class=tooltip><span class=tooltipText>If unlinked Creakings are introduced via other packs/mods, the drops will work as long as it was also not modified by said packs/mods.</span>to the mob itself</span> and also to it's linked Creaking Heart.</li>
+ <ul>
+  <li>For example: If a Charged Creeper blew up the linked Creaking Heart, the Creaking Head's source will be Charged Creeper.</li>
+ </ul>
+ <li>For drop sources that can't deal block damage: If they are the only ones active, Player Kill conditions will apply instead.</li>
+ <ul>
+  <li>Affected sources: Skeleton Kill, Potion Damage, Firework Explosion.</li>
+  <li>Affected depending on the <span tabindex=0 class=tooltip><span class=tooltipText>Can be edited using the Admin Book.</span>Mob Griefing Data</span>: Ghast Fireball, Charged Creeper Blast, Creeper Blast, Wither Kill.</li>
+  <li>I had different approaches to dealing with this but in the end I decided that in general, if the head can't be obtained via the sources selected, <span>it'll default to Player Kill</span> to make it easy to wrap your head around, which is important if you're using a lot of mods/packs together.</li>
+ </ul>
+</ul>
+
+<h1>Head Texture credits:</h1>
+<ul>
+ <li>Creaking Head: <a href="https://minecraft-heads.com/custom-heads/head/112861-creaking">https://minecraft-heads.com/custom-heads/head/112861-creaking</a></li>
+<ul>

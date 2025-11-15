@@ -1,0 +1,63 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-04-09",
+ "hide_date": false
+}
+</script>
+
+<p>(Starting a small experiment to try and categorize the new stuff in each update log)</p>
+<h1>Important changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.19.4.</li>
+ <ul>
+  <li>It's not advised to run this in older versions, I won't be able to provide much support if you do.
+  <br>(Imagine having to do that for all older versions for all my datapacks, you'll see a scale issue)</li>
+ </ul>
+ <li>Updating to the newest Decapitation will cause all its settings to be reset.</li>
+ <ul>
+  <li>I'll work on a stable upgrade system in the future, for now it is what it is.</li>
+ </ul>
+</ul>
+<h1>Gameplay Changes:</h1>
+<ul>
+ <li>Players now always drop their heads on death, no matter the condition.</li>
+ <ul>
+  <li>This has always been the case, but when I reworked the system for Scripter 3, I forgot to check for this small case, so it snuck by unnoticed. Whoops!</li>
+ </ul>
+</ul>
+<h1>1.20 Experimental Changes:</h1>
+<ul>
+ <li>Removed the Camel from the debug function, to avoid feature flag console issues in 1.19.4.</li>
+ <ul>
+  <li>That function is only used for debugging so I don't think this will affect you that much.</li>
+ </ul>
+</ul>
+ <li>Added the Sniffer head, as well as the sounds for it.</li>
+ <ul>
+  <li>A quick note here: This head sound design won't be the final design in use for 1.20.</li>
+  <ul>
+   <li>It's just an extra detail I've decided to add for those using Decapitation on experimental features.</li>
+   <li>I got a design far more ambitious in mind that I'll be using when 1.20 comes.</li>
+  </ul>
+ </ul>
+ <li>Fixed a bug causing some mobheads having split of pieces of a certain sound instead of that sound.</li>
+ <ul>
+  <li>Items affected that were fixed: Cod Heads, Player Head, ...
+  <br>(it's a generator issue, I'm sure there were more, these are the 2 I could find while testing)</li>
+ </ul>
+<h1><span tabindex=0 class=tooltip><span class=tooltipText>Just me polishing some stuff in the background.</span>Non-gameplay changes:</span></h1>
+<ul>
+ <li>Codebase now runs on Scripter 3.1.</li>
+ <li>Optimized the detection code for Wither Kill condition.</li>
+ <li>Optimized some head variant detection methods.</li>
+ <li>Reworked some extra description in Decapitation Admin Book to be a lot shorter.</li>
+ <li><span>TheDiamondPlayables</span> is now colored in <span style="color: #00BBBB">dark aqua</span> by design. (grey-ish aqua?)</li>
+ <ul>
+  <li>The old design feels more vanilla, but it doesn't sit right with me.
+  <br>Seeing a gray TheDiamondPlayables just feel ... off.</li>
+ </ul>
+</ul>
+
+<p>PS: I know I've said I'll add a list of all the heads you can get in one of these text files.
+But the function that gives you all the heads you can get in game is a lot more interactive than that,
+so that ultimately got scrapped.</p>

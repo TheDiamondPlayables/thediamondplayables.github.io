@@ -1,0 +1,113 @@
+<script id="version_info" type="application/json">
+{
+ "date": "2023-01-24",
+ "hide_date": false
+}
+</script>
+
+<p>(Also known as The Update Ahead)</p>
+
+<h1>Changes:</h1>
+<ul>
+ <li>Is now designed for Minecraft 1.19.3.</li>
+ <ul>
+  <li>It's not advised to run this in older versions, I won't be able to provide much support if you do.
+  <br>(Imagine having to do that for all older versions for all my datapacks, you'll see a scale issue)</li>
+ </ul>
+ <li>Added heads for the 1.19 mobs: Allay Head, <span tabindex=0 class=tooltip><span class=tooltipText>3 variants, drop depends on frog variant.</span>Frog Heads</span>, Tadpole Head, Warden Head.</li>
+ <li>Added a new OP-only command to spawn all available heads at once from Decapitation.</li>
+ <ul>
+  <li>Due to how the game works, you won't have them all in your inventory if you're in Creative mode.</li>
+ </ul>
+ <li>Withers will now always drop heads when killed if "Wither Kill" is the only criteria that's active.</li>
+ <ul>
+  <li>You can once again take all the heads with just this criteria active, just like the others.</li>
+  <li>For some reason past me thought you could kill Withers with other Withers and get heads that way.
+  <br>Obviously that theory wasn't tested. Whoops.</li>
+ </ul>
+ <li>Drop Chance has been reworked to match 1.19 mob rarity.</li>
+ <li>Wither Skeleton Skull drops now follows the criterias.</li>
+ <ul>
+  <li>Previously it would always drop heads on player kill, even if "Player Kill" is disabled.</li>
+  <li>Also removed a bug where it would sometimes drop 2 heads in certain cases.</li>
+ </ul>
+ <li>Vex Head change:</li>
+ <ul>
+  <li>New textures for Vex Head and Angry Vex Head to match the new Vexes.</li>
+  <li>The old Vex Head textures are now their own heads: Old Vex Head and Old Mad Vex Head.
+  <br>(This is how I preserve history lol)</li>
+ </ul>
+ <li>"Demon Panda Head" has been renamed into "Demonic Panda Head".</li>
+ <ul>
+  <li>Appearantly "Demon" isn't an adjective. Whoopsies!</li>
+  <li>Still learning English here lads. Still learning.</li>
+ </ul>
+ <li>"Legacy Slime Head" has been renamed into "Ancient Slime Head".</li>
+ <ul>
+  <li>This one is to be consistent with other "Ancient" heads out there.</li>
+ </ul>
+ <li>"Zombie Pigman" heads has been renamed into "Old Zombified Piglin" heads.</li>
+ <ul>
+  <li>Again, consistency with other "Old" heads out there.</li>
+ </ul>
+ <li>Overhauled Decapitation Admin Book appearance:</li>
+ <ul>
+  <li>Decapitation Admin Book texts is always in Unicode no matter the font you use.
+  <br>This is to ensure that "Force Unicode Font" or resourcepacks with custom fonts on default text won't affect the Admin Book's design.</li>
+  <li>Buttons now using colors + icons instead of solely relying on colors. Accessibility, folks.</li>
+  <li>No more introductions - learn how to use it yourself.
+  <br>The button's design should make it obvious enough as it is, so that's no longer necessary.</li>
+ </ul>
+ <li>Extra detail changes:</li>
+ <ul>
+  <li>Changed many details to the buttons' descriptions.
+  <br>Let me know if you've found any <a href="https://thediamondplayables.com/community">in the Discord</a>!</li>
+  <li>Same goes to a lot of the announcement texts when a head drop event gets changed.</li>
+ </ul>
+</ul>
+<h2>1.20 Experimental Changes:</h2>
+<ul>
+ <li>New mobhead drops comes with its own sound on a Note Block!</li>
+ <ul>
+  <li>The sound the mobhead makes on a Note Block depends on which head variant it is, as well as the mob the head came from.</li>
+  <li>You can only tell which sound the head plays by playing it on a Noteblock.</li>
+ </ul>
+ <li>Camel Head.</li>
+ <li>The heads obtained from "get all heads" OP command will not play any sounds.</li>
+ <ul>
+  <li>Not doing this means a super long command with over thousands of heads, so much that you won't be able to do anything with it anyway.</li>
+ </ul>
+</ul>
+<h1>Update Notes:</h1>
+<ul>
+ <li>You can try out the upcoming 1.20 features right now, here's how:</li>
+ <ol>
+  <li>Create a new world, click on "Datapacks", then "Open Pack Folder" and install Decapitation there.</li>
+ <li>Enable the builtin datapack "update_1_20", which lets you access to 1.20 features ahead of time.
+ <br>("update_1_20" is experimental and may break in the future, you have been warned)</li>
+ <li>Start your world, and have fun!</li>
+ </ol>
+ <li>Due to format changes (which adds the new head sounds from 1.20) to the heads' data, heads from this version will not be able to stack with heads from older versions.</li>
+ <ul>
+  <li>This is starting to feel like some kind of tradition by now ...</li>
+ </ul>
+ <li>For those updating Decapitation from an earlier version:</li>
+ <ul>
+  <li>It's advised to uninstall the previous version, then install the new one instead.</li>
+  <li>I worked on this from scratch on a new Scripter system, so the stored data from the previous versions can't translate to the new data format (as Scripter 3 was made entirely from scratch due to the data loss incident). That won't happen again.</li>
+ </ul>
+ <li>Some of the older advancements won't be available in this release.</li>
+ <ul>
+  <li>The old advancements are not easy to keep track of mentally, and are somewhat interesting, but in the end it isn't fun enough.</li>
+  <li>I'll add these back once I've gotten something good to add there, but for now I'll have to ship this without the advancements.</li>
+ </ul>
+ <li>Filtering through all mob sounds is a pain.</li>
+ <ul>
+  <li>I don't want to just lazily have all mob sounds in and market it as such.</li>
+  <ul>
+   <li>Some of them when heard are just boring, and some I don't think I can even say it's the mob's sound at all. Some doesn't even have any sounds, despite being playable sounds!</li>
+  </ul>
+  <li>So I took a lot of time listening to all the mob sounds, deciding what to keep and what to discard, and all this work took ages to finish.
+  <br>I saved all the sounds I discarded in the Scripter file for this update, so if you want the list, <a href="https://thediamondplayables.com/community">ask me on Discord</a>. The list's too long for an update log that's already too long so I decided not to list it here.</li>
+ </ul>
+</ul>
