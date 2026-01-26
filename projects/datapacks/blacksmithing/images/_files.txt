@@ -1,5 +1,0 @@
-anvil_recipes.jpg
-captions.json
-no_too_expensive.jpg
-title.jpg
-title.png
