@@ -1,0 +1,4 @@
+captions.json
+covering.webp
+settings.webp
+title.webp

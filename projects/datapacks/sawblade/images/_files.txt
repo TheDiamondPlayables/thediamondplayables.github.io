@@ -1,0 +1,6 @@
+captions.json
+cutting_recipes.webp
+damage.webp
+salvage_recipes.webp
+title.webp
+wood_recipes.webp

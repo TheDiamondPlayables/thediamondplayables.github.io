@@ -1,0 +1,3 @@
+captions.json
+premise.webp
+title.webp

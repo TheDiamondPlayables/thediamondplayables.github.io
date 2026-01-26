@@ -1,0 +1,4 @@
+captions.json
+config.webp
+premise.webp
+title.webp

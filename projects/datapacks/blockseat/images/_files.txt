@@ -1,0 +1,4 @@
+captions.json
+how_to_sit.webp
+sit_positions.webp
+title.webp

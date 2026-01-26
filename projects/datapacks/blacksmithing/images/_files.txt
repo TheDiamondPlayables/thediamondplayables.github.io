@@ -1,0 +1,4 @@
+captions.json
+no_too_expensive.webp
+repair_anvils.webp
+title.webp
