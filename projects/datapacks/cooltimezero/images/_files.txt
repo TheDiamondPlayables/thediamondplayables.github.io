@@ -1,2 +1,3 @@
 captions.json
+title.png
 title.webp

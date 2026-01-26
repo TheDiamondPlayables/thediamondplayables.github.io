@@ -1,4 +1,5 @@
 captions.json
 redye.webp
+title.png
 title.webp
 undye.webp

@@ -1,4 +1,5 @@
 captions.json
 config.webp
 premise.webp
+title.png
 title.webp

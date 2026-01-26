@@ -1,4 +1,5 @@
 captions.json
 concept.webp
 settings.webp
+title.png
 title.webp
